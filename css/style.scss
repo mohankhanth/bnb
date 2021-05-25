@@ -1,0 +1,299 @@
+@import 'partials/variables';
+@import 'partials/mixin';
+
+*{ margin: 0px; padding: 0px; box-sizing: border-box;}
+ul, h1, h2, h3, h4, h5, h6, p { margin: 0px; padding: 0px;}
+ul li { list-style: none;}
+a { outline: none; text-decoration: none; -webkit-transition: .5s; -o-transition: .5s; transition: .5s;}
+img { max-width: 100%; height: auto;}
+
+html { font-size: 62.5%;}
+body { font-family: 'Lato', sans-serif; font-size: 1.4rem; color: #504f4f; font-weight: 400;}
+
+nav .row { width: 100%;}
+.modal { z-index: 9999999;}
+
+.popforms01 {
+   & .form-label { margin-bottom: .5rem; font-size: 2rem;}
+   & .form-control { font-size: 2rem;}
+   & button { background: #066e84;  @include paragraph-text(1.8rem, #fff, 1rem 3rem 1.5rem);
+    width: 100%; border: 0px; transition: .5s;
+    &:hover {  background: #000;}}
+}
+
+.navbgs01 { @include width01(100%, left, 0rem 0rem, 0px,#fff); border-bottom: 5px solid #fbb02f;
+    @include position-absolute(0px, 0px); z-index: 99999;
+    & .navbarbgs01 { padding: 0px 0px;
+     & ul li { border-right: 1px solid #e6e6e6;}
+     & ul li:nth-last-child(1) { border-right: 0px;}
+     & ul li a { @include heading-text(1.6rem, #504f4f, 0rem 1rem); text-transform: uppercase; transition: .5s;
+        &:hover {  color: #fbb02f}
+     display: block; background: #fff; padding: 2rem 2rem;}
+     & ul li:nth-last-child(1) a { background: #fbb02f; color: #fff;
+         &:hover { background: #0072b9; color: #fff}
+        }
+    }
+   }
+
+#header { margin-bottom: 3rem;}
+#header.header-scrolled { position: fixed; top: 0rem; left: 0rem; z-index: 99999; transition: all 0.5s;
+background: rgba(0,0,0,0.7); padding-bottom: 0.5rem; width: 100%; margin: 0rem;}
+
+#header.header-scrolled .logos01 { margin-top: 0rem;}
+#header.header-scrolled .navbars01 ul { margin: 0rem 0rem 0rem;}
+
+.logos01 { @include d-flex01(flex-start, center); padding: 0rem 0rem 0rem 1rem; position: relative;
+                       overflow: hidden;
+
+   & .navbar-brand {  margin-right: 0rem; padding: 0rem 0rem;}
+
+   & img { margin-right: 0rem; height: auto !important; width: 90% !important;}
+
+   & h2 { font-size: $font-size-16px; font-weight: 700; position: relative;
+        padding-left: 2.5rem; margin-left: 5px;
+
+        &::before { content: ''; height: 100%; width: 2px; background: #504f4f;
+        position: absolute; top: 0px; left: 0px;}
+    }
+}
+
+.banners01, .banners02 { 
+    @include width01(100%, left, 0px, 0px, #fff); position: relative; min-height: 100vh;
+    img {border: 0px; max-width: 100%; height: 100%;}
+}
+
+.wrapacoomds01 { @include position-absolute(inherit, 0px); bottom: 0.9rem; z-index: 99999; width: 100%;
+   & .accomodations01 {@include width01(100%, left, 3rem 0rem 4rem, 0rem, #fbb02f); text-align: center;
+        & h2 { @include heading-text(3.5rem, #066e84, 0rem 0rem 1rem)}
+        & ul { @include d-flex01(center, center);}
+        & ul li { @include paragraph-text(2rem, #fff, 0rem 1.5rem 1rem);
+                  float: left;}
+        & ul li a { @include paragraph-text(2rem, #fff, 0rem 0rem 1rem); transition: .5s;
+              &:hover { color: #000;}
+              &.active { color: #000;}
+             }
+        & .seachfrms01 { margin: 1rem 0rem 0rem; display: none;
+            &.active { display: flex;}
+            & button { background: #066e84;  @include paragraph-text(1.8rem, #fff, 1rem 3rem 1.5rem);
+                width: 100%; border: 0px; transition: .5s;
+            &:hover {  background: #000;}}
+            & input { @include paragraph-text(1.6rem, #000, .5rem 2rem); border: 0px;}
+            & .no-gutters { padding: 0rem; margin: 0rem;}
+            & .input-group-prepend { background: #fff; padding: 1rem 1.5rem 1.1rem; font-size: 2rem;}
+        }
+     }
+}
+
+
+
+.wrapmostpops01 { @include width01(100%, left, 4rem 0rem 4rem, 0rem, #fff);
+  & .contentheads { @include width01(100%, left, 0rem 0rem 3rem, 0px, #fff); text-align: center;
+        h2 { @include paragraph-text(3.5rem, #066e84, 0rem); font-weight: 400;}
+       }
+   & .citybxs01 { 
+        display: grid; grid-template-columns:  1fr 1fr 1fr 1fr;  grid-template-rows: 300px 300px;
+        grid-gap: .3rem .3rem; margin-bottom: 3rem;
+        .wrapctybxs001 { position: relative; overflow: hidden; background: #000;
+        & img { width: 100%; height: 100%; opacity: 0.7;}
+        & .abovebgs01 { @include position-absolute(0px, 0px);
+            padding: 0rem 0rem 1.5rem 1.5rem; width: 100%; height: 100%; @include d-flex01(flex-end, flex-start); 
+            flex-direction: column;
+            & h2 { @include heading-text(2.5rem, #fff, 0rem 0rem 1rem 0rem);}  
+            & p { @include heading-text(1.6rem, #fff, 0rem 0rem 1rem 0rem);}
+            
+            }
+        }
+        .ctybxs01 { grid-column: 1/3;}
+        .ctybxs02 { grid-column: 3/5;}
+        .ctybxs03 { padding: 0px;}
+    }
+}
+
+.clickbtns01 { @include width01(100%, left, 0px, 0rem 0rem 1rem 0rem, #fff); text-align: center;}
+.clickbtns01 a { @include heading-text(1.7rem, #066e84, .7rem 1.9rem 1rem); transition: .5s; border: 1px solid #066e84 ;
+    border-radius: .5rem; display: inline-block;
+    &:hover { background: #000; color: #fff;}
+ }
+
+ .horilins01 { position: relative; overflow: hidden;
+    &::before { content: ''; @include position-absolute(41px, 10px); width: 98%; height: 3px;
+                background: #fff;}
+ }
+
+.howitworks01 { @include width01(100%, left, 4rem 0rem 6rem, 0rem, #19b1fd);
+    & .wraphtwks01 h2 {  @include heading-text(3.5rem, #fff, 0rem 0rem 3rem 0rem); font-weight: 400;
+       text-align: center;}
+    & .wraphtwks02 h2 {  @include heading-text(1.7rem, #fff, .8rem 0rem 4rem 0rem)}
+    & .wraphtwks02 p {  @include paragraph-text(1.6rem, #fff, 0rem)}
+    & img { margin-bottom: 1rem; position: relative; z-index: 9;}
+}
+
+.toprateds01 { @include width01(100%, left, 4rem 0rem 4rem, 0rem,#fff);
+    & .wraptoprds01 h2 {  @include heading-text(3rem, #066e84, 0rem 0rem 2.5rem 0rem); font-weight: 400;
+      text-align: center;}
+    & .topratedbx01 { display: grid; grid-template-columns:  1fr 1fr 1fr 1fr; grid-gap: 0rem 0.2rem;
+                      margin-bottom: 3.5rem;
+    
+        & img { width: 100%; height: 100%; opacity: 0.7; transition: .5s;
+           &:hover { transform: scale(1.5);}
+        }     
+
+        & .topratedbx01a { position: relative; overflow: hidden; background: #000;}
+
+        & .topavebgs01 { @include position-absolute(0px, 0px); 
+            padding: 0rem 0rem 1rem 1.5rem; width: 100%; height: 100%; @include d-flex01(flex-end, flex-start); 
+            flex-direction: column;
+            & .row { width: 100%;}
+            & h2 { @include heading-text(1.6rem, #fff, 0rem 0rem 0.3rem 0rem);}  
+            & p { @include heading-text(1.6rem, #fff, 0rem 0rem 0.7rem 0rem);}
+            & .fa { font-size: 2rem; color: #fff;}
+            & .icons01 { @include d-flex01(flex-end, flex-start); margin-top: 1rem;}
+            & .icons01 .fa { font-size: 2rem; color: #fff; margin-left: 1rem; font-weight: 700;}
+            }
+    }
+}
+
+.stayinformed01 {@include width01(100%, left, 5rem 0rem 5rem, 0rem, #272727);
+    & h2 { @include heading-text(3rem, #fbb02f, 0rem 0rem 0rem 0rem); text-transform: uppercase}
+    & p { @include paragraph-text(2.2rem, #fff, 0rem 0rem 5rem 0rem);}
+    & .form-control {@include paragraph-text(2rem, #fff, 1.3rem 1rem 1.3rem 2rem); background: transparent;
+                     border: 2px solid #6a6a6a; border-radius: 5px; margin-bottom: 3rem;}
+    & .btn-primary { @include heading-text(2rem, #272727, 0.7rem 1.9rem 1rem); transition: .5s;
+                    background: #fbb02f; border-color: #fbb02f; border-radius: 5px;
+                    &:hover { background: #fff;}
+                   }
+    }
+
+footer {@include width01(100%, left, 5rem 0rem 4rem, 0rem, #fff);
+        & .col-sm-1 { width: 6%;}
+        & h2 { @include paragraph-text(2.4rem, #1b1b1b, 0rem 0rem 2.5rem);}
+        & p { @include paragraph-text(1.6rem, #777777, 0rem 0rem 1rem);
+         & .fa { font-size: 2rem; color: #afafaf;}
+         & span { padding-left: 1rem;}
+        }
+        & a { @include paragraph-text(1.6rem, #777676, 0rem 0rem 0.5rem); display: block; transition: .5s;
+            &:hover { color: #000;}
+          & .fa {}}
+        & ul li { @include width01(100%, left, .5rem 1rem 0.5rem, 0rem, #19b1fd); font-size: 1.5rem; 
+            color: #fff; border-radius: 5px 5px 0px 0px; text-align: center; font-weight: 700;}
+        & ul li:nth-last-child(1) { background: #000; border-radius: 0px 0px 5px 5px;}
+        & hr { @include width01(100%, left, 0px, 3rem 0rem 2rem, inherit); height: 2px; background: #1b1b1b;}
+        & .fooicons01 { @include width01(100%, left, 0rem 0rem 1rem, 0rem, #fff); @include d-flex01(center, center); text-align: center;
+            & a .fa { background: #868686; color: #fff; 
+                margin-right: 1rem; transition: .5s; font-size: 2rem; border-radius: 10rem;
+                     &:hover { background: #fbb02f; color: #fff;}
+                  }
+            & a:nth-of-type(1) .fa { padding: 1rem 1.4rem;}
+            & a:nth-of-type(2) .fa { padding: 1rem 1rem;}
+            & a:nth-of-type(3) .fa { padding: 1rem 1.2rem;}
+            }
+}
+
+
+
+// Media query start here
+
+@media(max-width:767px) {
+
+    .logos01 { flex-direction: column; padding: 1rem 0rem 1rem 1rem; align-items: center;
+            & h2 { padding-left: 0rem;  margin-left: 0rem;
+            &::before { display: none;}           
+        }
+        & button { position: absolute;
+            top: 2rem;
+            right: 1rem;}
+    }
+
+    .navbgs01 { position: relative; top: inherit; left: inherit; margin-bottom: 2rem;}
+
+    .banners01,.banners02 { min-height: inherit;}
+
+    .banners02 {padding: 0rem 1rem;}
+
+    .wrapacoomds01 { @include position-absolute(inherit, inherit); bottom: inherit; z-index: inherit;
+         width: 100%; position: inherit; float: left;}
+     .owl-carousel { margin-bottom: 2rem;}
+
+     .wrapacoomds01 .accomodations01 { padding: 1rem 0rem 1rem;
+       & h2 { font-size: 2.5rem;}}
+
+     .wrapacoomds01 .accomodations01 ul { flex-direction: column;
+        & li:nth-child(2),
+        & li:nth-child(4) { display: none;}  
+      }
+      .wrapacoomds01 .accomodations01 .seachfrms01 {
+          & button { width: 95%;}
+          & .no-gutters { display: flex; justify-content: center;}
+          & .input-group { width: 95%; margin-bottom: 1rem;}
+      }
+
+    .wrapmostpops01 { padding: 2rem 0rem 1rem;
+        & .contentheads { padding: 0rem 0rem 1.5rem;
+        & h2 { font-size: 2.5rem;}}
+        }
+
+    .wrapmostpops01 .citybxs01 { grid-template-columns: 1fr; grid-template-rows: 1fr; margin-bottom: 2rem;
+            & .ctybxs01 { grid-column: inherit;}
+            & .ctybxs02 { grid-column: inherit;}
+        }
+
+    .howitworks01 { padding: 2rem 1rem 1rem;
+            & .wraphtwks01 h2 { padding: 0rem 0rem 2rem 0rem; margin-top: .5em;}
+        }
+
+    .horilins01 { text-align: center;
+            &::before { display: none;}
+            & .wraphtwks02  {
+               & h2 { padding: 0.8rem 0rem 2rem 0rem;}
+               & p { padding-bottom: 2rem;}
+            }
+        }
+
+        .toprateds01 { padding: 2rem 0rem 2rem;
+            & .topratedbx01 { grid-template-columns: 1fr; grid-gap: 1rem 1rem; margin-bottom: 2rem;}
+            & .wraptoprds01 h2 { padding: 0rem 0rem 1rem 0rem;}
+        }
+
+        footer { padding: 1rem 0rem 4rem; text-align: center;
+            & h2 { padding: 2rem 0rem .8rem;}
+            & ul { display: flex; justify-content: center; margin-bottom: 2rem;
+               & li { width: inherit; border-radius: 5px;}
+               & li:nth-last-child(1) { border-radius: 5px; margin-left: 5px;}
+            }
+        }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    html { font-size: 70%;}
+
+    .navbgs01 { z-index: 999999;}
+
+    .banners01, .banners02 { min-height: inherit; margin-bottom: 2rem;}
+
+    .wrapmostpops01 {
+        & .citybxs01 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr;
+        & .ctybxs01 { grid-column: inherit;}
+        & .ctybxs02 { grid-column: inherit;}
+        }
+    }
+
+    .horilins01 {
+        &::before { display: none;}
+    }
+
+    .toprateds01 {
+        & .topratedbx01 { grid-template-columns: 1fr 1fr; grid-gap: 1rem 0.8em;}
+    }
+
+    .logos01 {
+        & button { position: absolute; top: 1rem; right: 1rem;}
+    }
+
+    .wrapacoomds01 { position: relative; top: inherit; left: inherit;  bottom: inherit; float: left;}
+}
+
+@media (min-width: 992px) and (max-width: 1230px) {
+    .banners01, .banners02 { min-height: inherit;}
+}
+

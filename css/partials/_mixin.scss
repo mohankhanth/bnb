@@ -1,0 +1,19 @@
+@mixin width01($width, $left, $padding, $margin, $background) {
+  width:$width ; float: $left; padding: $padding; margin: $margin; background: $background;
+}
+
+@mixin position-absolute($top, $left) {
+ position: absolute; top:$top ; left: $left;
+}
+
+@mixin d-flex01($space-between, $center) {
+    display: flex; justify-content: $space-between; align-items: $center;
+  }
+
+ @mixin heading-text($size, $color, $padding) {
+   font-size: $size; color: $color; padding: $padding; font-weight: 700;
+ }
+
+ @mixin paragraph-text($size, $color, $padding) {
+  font-size: $size; color: $color; padding: $padding;
+}
